@@ -9,14 +9,14 @@
     >
       <div
         v-if="isModalOpen"
-        class="fixed top-0 left-0 w-screen h-screen bg-black opacity-50 flex justify-center items-center"
+        class="fixed top-0 left-0 w-screen h-screen bg-black/50 flex justify-center items-center"
       >
         <div
           ref="modal"
-          class="relative bg-white px-12 py-24 rounded shadow-md"
+          class="relative bg-white w-80 h-60 rounded shadow-md p-4"
         >
           <button @click="hide" class="absolute top-0 right-2">x</button>
-          Click outside to close it
+          <CreateNote />
         </div>
       </div>
     </Transition>
@@ -26,6 +26,7 @@
 <script setup>
 import { ref } from "vue";
 import { onClickOutside } from "@vueuse/core";
+import CreateNote from "./CreateNote.vue";
 
 const { isModalOpen } = defineProps({
   isModalOpen: Boolean,
