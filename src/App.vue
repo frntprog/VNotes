@@ -13,7 +13,7 @@
     >
       Create Note
     </button>
-    <NoteList class="h-screen flex items-center justify-center" />
+    <NoteList class="mt-24 px-24 grid grid-cols-4 gap-6" />
     <Modal @hideModal="setModalVisibilty" :isModalOpen="isModalOpen" />
   </div>
 </template>

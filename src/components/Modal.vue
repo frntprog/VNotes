@@ -9,7 +9,7 @@
     >
       <div
         v-if="isModalOpen"
-        class="fixed top-0 left-0 w-screen h-screen bg-black/50 flex justify-center items-center"
+        class="z-40 fixed top-0 left-0 w-screen h-screen bg-black/50 flex justify-center items-center"
       >
         <div
           ref="modal"
